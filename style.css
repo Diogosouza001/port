@@ -1,0 +1,294 @@
+/* Reseta alguns estilos padrão */
+ 
+  @font-face{           
+  src: url('Montserrat-Italic-VariableFont_wght.ttf') format('opentype'), url('Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'love1';}
+   
+    @font-face{           
+  src: url('Montserrat-VariableFont_wght.ttf') format('opentype'), url('Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'love2';}
+
+  @font-face{           
+  src: url('CalSans-Regular.ttf') format('opentype'), url('CalSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'love3';}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+body {
+    
+    font-family: 'Roboto', sans-serif;
+    
+    background-color:#07080d;
+    overflow-x: hidden; /* evita rolagem lateral */
+    
+}
+header {
+    font-family:love2;
+    background: #e7080800;
+    color: #ffffffee;
+    position: fixed;
+}
+main {
+
+    display: flex;
+  
+    background-color:#00000000;
+        
+}
+/* ====== CABEÇALHO E MENU ====== */
+
+
+/* animação do X (já usava .open) */
+.menu-toggle.open span:first-child {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-toggle.open span:last-child {
+  transform: translateY(-10px) rotate(-45deg);
+} 
+
+
+nav ul {
+    list-style: none;
+    gap: 3rem;
+    transform: rotate(90deg);
+    font-family:love2;
+    color: #ffffffee;
+    max-width:25px;
+    display: flex;
+    margin-left: -15px; 
+    white-space:nowrap;  
+}
+
+nav ul li a {
+    color:#e0e1e2;
+    text-decoration: none;
+    
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color:#7BDEEF;
+}
+
+
+/* ====== CONTEÚDO ====== */
+
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 2rem;
+    font-size:clamp (1rem, 1vw, 1rem);
+}
+
+
+/* ====== RESPONSIVO ====== */
+@media (min-width:750px) {
+    .menu-button {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+  }
+@media (max-width: 750px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+  }
+    @media (max-width: 1000px) {
+    .img-proje {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10rem;
+    }
+  }
+
+    nav ul.active {
+        display:flex;
+
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+  h1{
+      margin: 40px;
+      font: size 2vw;
+     
+    }
+    h2{
+      font-family:love3;
+      margin: 30px;
+      color:#fa8f14;
+      font-size: clamp(20px,3vw,30px);     
+  
+ 
+    }
+    h3{
+      font-size: clamp(15px, 4vw, 30px);   
+      margin: 40px;
+      color:#ffffff;
+      font-family:love1;
+      text-align:auto;
+
+    }
+
+    p{
+      margin: 25px;
+      font-family: 'love3';
+      font-size:clamp(18px,3vw, 25px);
+      font-weight:100; 
+   
+
+      
+    }
+    li{
+     
+      width: 100%; 
+      font-size: 18px;
+      font-weight:10;  
+      padding-top: 3%; 
+    }
+    #destaques{
+      color:#7BDEEF;
+    }
+   
+
+
+/* Conteúdo */
+.content {
+  opacity: 0;
+  transition: opacity 1s ease;
+  padding: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.content.active {
+  opacity: 1;
+}
+
+
+/* Menu */
+.nav-menu.show {
+  display: block;
+}
+
+.side-menu {
+  position: fixed;
+  left: -300px;
+  transition: left 0.3s;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Animações AOS personalizadas se necessário */
+.apareceu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 1px 10px;
+  font-size: 18px;
+  background-color: #00aeee00;
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+.ico{
+  text-align: center;
+  background-color: #515252;
+}  
+  .textos{
+    color: #fafafa;
+    font-family:love2;
+    max-width: 1200px;
+  }
+  .p{
+     font-family:love3;
+
+  }
+.nume{
+  color: #e0e1e2;
+  white-space:nowrap;
+
+}
+ .duvi{
+    background-color: #242323dc;
+    color: #e0e1e2;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: large;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);  
+    text-decoration: none; 
+    transition: color 0.3s;
+    
+  }
+  .duvi:hover{
+    background-color:#7BDEEF;
+    color: #000000de;
+  }
+ .skill-desktop-only {
+  display: none;
+  }
+  a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+ 
