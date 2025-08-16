@@ -248,6 +248,7 @@ h1, h2, h3 {
     color: #fafafa;
     font-family:love2;
     max-width: 1200px;
+    font-size:clamp(12px,2vw, 22px);
   }
   .p{
      font-family:love3;
@@ -349,4 +350,5 @@ h1, h2, h3 {
     display: none;
   }
 }
+
 
