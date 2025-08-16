@@ -120,7 +120,7 @@ h1, h2, h3 {
     }
   }
     @media (max-width: 1000px) {
-    .img-proje {
+    .img-pro {
         display: none;
         flex-direction: column;
         background: #333;
@@ -293,3 +293,4 @@ a:visited {
 
 
  
+
