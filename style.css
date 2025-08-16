@@ -118,20 +118,15 @@ h1, h2, h3 {
         width: 200px;
         padding: 1rem;
     }
+  
   }
-    @media (max-width: 1000px) {
-    .img-pro {
-        display: none;
-        flex-direction: column;
-        background: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10rem;
-    }
+  @media (max-width: 1200px) {
+      .site {
+        
+      
+      }
+  
   }
-
     nav ul.active {
         display:flex;
 
@@ -286,11 +281,59 @@ h1, h2, h3 {
   display: none;
   }
   a:link,
-a:visited {
+  a:visited {
     color: inherit;
     text-decoration: none;
 }
 
-
  
+.sites {
+  display: flex;
+  justify-content: center; /* centraliza na horizontal */
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;         /* deixa quebrar de linha se não couber */
+}
 
+.sites img {
+  max-width: 100%;   /* nunca passa da largura da tela */
+  width: 700px;      /* tamanho desejado */
+  height: auto;
+}
+
+/* Quando a tela for menor */
+@media (max-width: 768px) {
+  .sites {
+    flex-direction: column; /* coloca uma embaixo da outra */
+  }
+
+  .sites img {
+    width: 90%;   /* ocupa quase toda a largura da tela */
+    max-width: 400px;
+  }
+}
+.sites1 {
+  display: flex;
+  justify-content: center; /* centraliza na horizontal */
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;         /* deixa quebrar de linha se não couber */
+}
+
+.sites1 img {
+  max-width: 100%;   /* nunca passa da largura da tela */
+  width: 700px;      /* tamanho desejado */
+  height: auto;
+}
+
+/* Quando a tela for menor */
+@media (max-width: 768px) {
+  .sites1 {
+    flex-direction: column; /* coloca uma embaixo da outra */
+  }
+
+  .sites1 img {
+    width: 90%;   /* ocupa quase toda a largura da tela */
+    max-width: 400px;
+  }
+}
