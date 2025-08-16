@@ -33,7 +33,8 @@
         </nav>
     </header>
 
-    <main>
+    <main> 
+                        
 
        <button class="menu-button" onclick="toggleMenu()">☰</button>
         <div id="sideMenu" class="side-menu">
@@ -55,8 +56,11 @@
         </div> 
         </div> 
     
-      
+
         <div class="textos">
+            
+                   <img src="gif.gif" id="gif" style="max-width:100%;">
+                   <img src="ultima.png" id="ultima" style="display:none; max-width:100%;" data-aos="fade-up">
         <h1 data-aos="flip-left">Olá, seja bem-vindo ao meu portfólio!</h1>
          <h2 data-aos="fade-up">Quem sou eu?</h2>
             <h3> Me chamo <a id="destaques" data-aos="fade-up">Alex</a>, <a id="destaques" data-aos="zoom-in">desenvolvedor</a> web apaixonado por <a id="destaques" data-aos="zoom-in">tecnologia</a>, inovação e   <a id="destaques" data-aos="zoom-in">design</a>. Há anos, mergulhado no universo da programação e desenvolvimento web. Atualmente, sou estudante de engenharia de software. ajudo empresas, startups e criadores a darem vida às suas ideias através de soluções digitais <a id="destaques" data-aos="zoom-in">modernas</a>, eficientes e visualmente incríveis.</h3>
@@ -90,11 +94,9 @@
 
     </div>      
   </main>
-  <div class="sites" data-aos="flip-left">
-     <div>
+  <div class="sites1" data-aos="flip-left">
        <img src="imagens/site1.png" alt="Foto de exemplo" class="circular-image">
-          <img src="imagens/site2.png" alt="Foto de exemplo" class="circular-image">
-     </div>               
+          <img src="imagens/site2.png" alt="Foto de exemplo" class="circular-image">              
   </div>
   <div class="sites1" data-aos="flip-right">
       <img src="imagens/ciade2.png" alt="Foto de exemplo"   class="circular-image">
@@ -135,6 +137,14 @@ VANTA.WAVES({
     once: true,     // anima só uma vez (não repete quando rola pra cima)
     offset: 100     // distância em px antes de ativar
   });
+</script>
+
+<script>
+  // tempo aproximado da duração do gif em milissegundos
+  setTimeout(() => {
+    document.getElementById("gif").style.display = "none";
+    document.getElementById("ultima").style.display = "block";
+  }, 5000); // ajuste o tempo para a duração do seu gif
 </script>
 
 </body>
