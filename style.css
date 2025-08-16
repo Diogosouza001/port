@@ -337,3 +337,16 @@ h1, h2, h3 {
     max-width: 400px;
   }
 }
+.img-proje1 {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+/* Quando a tela for menor que 700px, some */
+@media (max-width: 700px) {
+  .img-proje1 {
+    display: none;
+  }
+}
+
