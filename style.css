@@ -19,34 +19,62 @@
   font-family: 'love3';}
 
 * {
-  max-width: 100%;
-  box-sizing: border-box;
+    max-width: 100%;
+    box-sizing: border-box;
 }
-
 
 body {
-    
     font-family: 'Roboto', sans-serif;
-    
-    background-color:#07080d;
+    background-color:#bfc1ca;
     overflow-x: hidden; /* evita rolagem lateral */
+    margin-left: 5px;
     
 }
+
 header {
     font-family:love2;
-    background: #e7080800;
+    background: #cf111100;
     color: #ffffffee;
     position: fixed;
+    
 }
 main {
-
-    display: flex;
-  
     background-color:#00000000;
+    
         
 }
 /* ====== CABEÇALHO E MENU ====== */
+.top1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* centraliza o texto e a imagem na vertical */
+  gap: 40px;
+}
 
+.top1 div {
+  flex: 1;  /* ocupa o espaço restante */
+}
+
+.imgtop {
+  max-width: 350px;  /* aumenta o tamanho máximo da imagem */
+  width: 100%;       /* ocupa 100% do espaço disponível */
+  height: auto;      /* mantém proporção */
+}
+.top2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* centraliza o texto e a imagem na vertical */
+  gap: 40px;
+
+}
+.top2 div{
+  flex: 1;
+  margin: auto;
+  width: 1500px;
+}
+ 
+
+ 
 
 /* animação do X (já usava .open) */
 .menu-toggle.open span:first-child {
@@ -99,16 +127,16 @@ h1, h2, h3 {
     .menu-button {
         display: none;
         flex-direction: column;
-        background: #333;
+        background: #c51111;
         position: absolute;
         top: 60px;
         right: 0;
         width: 200px;
-        padding: 1rem;
+        padding: 5rem;
     }
   }
 @media (max-width: 750px) {
-    nav ul {
+    .social a{
         display: none;
         flex-direction: column;
         background: #333;
@@ -121,8 +149,30 @@ h1, h2, h3 {
   
   }
   @media (max-width: 1200px) {
-      .site {
-        
+      .imgtop {
+                display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+      
+      }
+  
+  }
+
+    @media (max-width: 1200px) {
+      .top2 img {
+                display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
       
       }
   
@@ -138,7 +188,7 @@ h1, h2, h3 {
 
   h1{
       margin: 40px;
-      font: size 2vw;
+      font: size 1vw;
      
     }
     h2{
@@ -156,6 +206,11 @@ h1, h2, h3 {
       font-family:love1;
       text-align:auto;
 
+    }
+    h4{
+      color: #ffffff;
+      width: 800px;
+      margin: auto;
     }
 
     p{
@@ -201,8 +256,15 @@ h1, h2, h3 {
 
 .side-menu {
   position: fixed;
-  left: -300px;
+  left: -6000px;
   transition: left 0.3s;
+  z-index: 9999; 
+  font-family: love3;
+  background-color:#1b1b1be1;
+  width: 400px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .side-menu.active {
@@ -215,7 +277,7 @@ h1, h2, h3 {
   position: fixed;
   z-index: 10;
   padding-top: 60px;
-  left: 0;
+  left: 0px;
   top: 0;
   width: 100%;
   height: 100%;
@@ -232,23 +294,27 @@ h1, h2, h3 {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1001;
+  z-index: 100;
   padding: 1px 10px;
   font-size: 18px;
-  background-color: #00aeee00;
+  background-color: #4c7e9100;
   color: aliceblue;
   border-radius: 5px;
+  z-index: 9999; 
 }
 
 .ico{
   text-align: center;
-  background-color: #515252;
+  background-color:#fa8f14;;
+  font-family: love3;
+  
 }  
   .textos{
     color: #fafafa;
     font-family:love2;
-    max-width: 1200px;
+    max-width:1500px;
     font-size:clamp(12px,2vw, 22px);
+    
   }
   .p{
      font-family:love3;
@@ -287,7 +353,7 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
- 
+
 .sites {
   display: flex;
   justify-content: center; /* centraliza na horizontal */
@@ -338,11 +404,12 @@ h1, h2, h3 {
     max-width: 400px;
   }
 }
+
 .img-proje1 {
   max-width: 300px;
   width: 100%;
   height: auto;
-}
+} 
 
 /* Quando a tela for menor que 700px, some */
 @media (max-width: 700px) {
@@ -350,5 +417,130 @@ h1, h2, h3 {
     display: none;
   }
 }
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
 
+    .skill {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin: 20px;   
+  }
+  .skill-name {
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(255, 255, 255);
+    font-size: clamp(1rem, 2vw, 1rem);
+  }
+      .bar-container {
+    width: 50%;
+    background: #333;
+    border: 2px solid rgb(105, 104, 104);
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    
 
+    margin-top: 1px;
+    height: 15px;
+
+  }
+  .bar-fill1 {
+    height: 100%;
+    background:#7BDEEF;
+    width: 0%;
+    transition: width 4s ease;
+  }
+  .bar-fill2 {
+    height: 100%;
+    background:#fa8f14;
+    width: 0%;
+    transition: width 4s ease;
+  }
+  .bar-fill3 {
+    height: 100%;
+    background:#6f9ff7;
+    width: 0%;
+    transition: width 4s ease;
+  }
+  .bar-fill4 {
+    height: 100%;
+    background:#fa8f14;
+    width: 0%;
+    transition: width 4s ease;
+  }
+  .bar-fill5 {
+    height: 100%;
+    background:#f57600dc;
+    width: 0%;
+    transition: width 4s ease;
+  }
+  .bar-fill6 {
+    height: 100%;
+    background:#fafafa;
+    width: 0%;
+    transition: width 4s ease;
+  }
+  h2.apareceu {
+    opacity: 2;
+    transform: translateX(0);
+  }
+  .bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-top: 3px ;
+    font-size: clamp(1rem, 2vw, 1rem); 
+    font-weight: 200;  
+
+  
+  }
+  .duvi:hover{
+    background-color:#0fcfff;
+    color: #222222de;
+  }
+ .skill-desktop-only {
+  display: none;
+  }
+
+   @media (min-width: 468px) {
+  .skill-desktop-only {
+    display: block;
+   }
+ }
+
+ .lateral {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl; /* texto de cima para baixo */
+  text-orientation: mixed;   /* mantém letras na posição normal */
+  background: #22222200;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  border-radius: 0 10px 10px 0;
+  z-index: 9999; /* garante que fica acima de tudo */
+}
+
+.social a{
+ margin: 50px;
+ font-family:love2;
+}
+.side-menu a{
+  color: #ffffff;
+  font-size: 30px;
+  font-family: love2;
+  padding: 20px;
+  margin-bottom: 40px;
+}
