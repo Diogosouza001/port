@@ -25,7 +25,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color:#bfc1ca;
+    background-color:#191a24ef;
     overflow-x: hidden; /* evita rolagem lateral */
     margin-left: 5px;
     
@@ -544,3 +544,4 @@ footer {
   padding: 20px;
   margin-bottom: 40px;
 }
+
